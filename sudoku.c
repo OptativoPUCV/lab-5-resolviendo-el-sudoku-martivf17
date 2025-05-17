@@ -124,7 +124,6 @@ int is_final(Node* n){
   {
     for(int j = 0; j < 9; j++)
     {
-        
         if(n->sudo[i][j] == 0){
           return 0;
         }
@@ -134,7 +133,28 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  return NULL;
+
+  Stack* pila = createStack();
+  push(pila, initial);
+  while(!is_empty(pila)) {
+    Node* n = top(pila);
+    pop(pila);
+    if(is_valid(n)) continue;
+
+    if(is_final(n)){
+      return n;
+    }
+    
+    List* adj = get_adj_nodes(n);
+    Node* aux = first(adj);
+    while(aux){
+      push(pila, aux);
+      aux = next(adj);
+
+    }
+    free(n);
+  }
+
 }
 
 

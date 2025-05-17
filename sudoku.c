@@ -58,9 +58,21 @@ int is_valid(Node* n){
     }
   }
 
+  for(j = 0; j < 9; j++)
+  {
+    int vistos[10] = {0};
 
+    for(i = 0; i < 9; i++){
 
-    return 1;
+      int valor = n->sudo[i][j];
+      if(valor != 0){
+        if (vistos[valor]) return 0;
+        vistos[valor] = 1;
+      }
+    }
+  }
+
+  return 1;
 }
 
 

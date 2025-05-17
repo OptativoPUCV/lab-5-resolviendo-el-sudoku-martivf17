@@ -84,7 +84,7 @@ int is_valid(Node* n){
           vistos[valor] = 1;
         }
     }
-
+  }
   return 1;
 }
 

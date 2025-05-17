@@ -147,3 +147,14 @@ Sat, May 17, 2025  2:22:10 PM:
  tests:  6|2
 total_score: 45/70
 b68380c
+Sat, May 17, 2025  2:25:32 PM: 
+ sudoku.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_final':
+sudoku.c:125:9: error: unused variable 'vistos' [-Werror=unused-variable]
+     int vistos[10] = {0};
+         ^~~~~~
+cc1.exe: all warnings being treated as errors
+d153fe5

@@ -120,7 +120,18 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-    return 0;
+  for(int i = 0; i < 9; i++)
+  {
+    int vistos[10] = {0};
+    for(int j = 0; j < 9; j++)
+    {
+        int valor = n->sudo[i][j];
+        if (valor == 0){
+          return 0;
+        }
+    }
+  }
+    return 1;
 }
 
 Node* DFS(Node* initial, int* cont){

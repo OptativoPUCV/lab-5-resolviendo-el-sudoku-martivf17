@@ -28,3 +28,15 @@ sudoku.c:49:25: error: expected ';' before ')' token
                          ^
 cc1.exe: all warnings being treated as errors
 c1fa4be
+Sat, May 17, 2025  2:08:49 PM: 
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:49:13: error: right-hand operand of comma expression has no effect [-Werror=unused-value]
+   for (i = 0, i < 9; i++){
+             ^
+sudoku.c:49:25: error: expected ';' before ')' token
+   for (i = 0, i < 9; i++){
+                         ^
+cc1.exe: all warnings being treated as errors
+c35df5d

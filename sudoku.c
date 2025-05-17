@@ -46,7 +46,7 @@ void print_node(Node* n){
 int is_valid(Node* n){
   int i, j;
 
-  for (i = 0, i < 9; i++){
+  for (i = 0; i < 9; i++){
     int vistos[10] = {0};
 
     for(j = 0; j < 9; j++){
@@ -59,7 +59,7 @@ int is_valid(Node* n){
   }
 
 
-  
+
     return 1;
 }
 

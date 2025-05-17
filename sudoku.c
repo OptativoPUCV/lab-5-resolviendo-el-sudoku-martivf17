@@ -125,9 +125,9 @@ int is_final(Node* n){
     int vistos[10] = {0};
     for(int j = 0; j < 9; j++)
     {
-        int valor = n->sudo[i][j];
-        if(valor != 0){
-          if (vistos[valor]) return 0;
+        
+        if(n->sudo[i][j] == 0){
+          return 0;
         }
     }
   }

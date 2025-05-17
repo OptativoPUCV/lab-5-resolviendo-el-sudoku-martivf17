@@ -72,16 +72,17 @@ int is_valid(Node* n){
     }
   }
 
-  for(int k = 0; k < 9; k++)
-  {
+  for(int k = 0; k < 9; k++){
     int vistos[10] = {0};
 
     for(int p=0;p<9;p++){
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
         int valor = n->sudo[i][j];
-        if(valor != 0) return 0;
-        vistos[valor] = 1;
+        if(valor != 0) {
+          if (vistos[valor]) return 0;
+          vistos[valor] = 1;
+        }
     }
 
   return 1;

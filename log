@@ -112,3 +112,26 @@ test.c:7:8: error: '_strdup' defined but not used [-Werror=unused-function]
         ^~~~~~~
 cc1.exe: all warnings being treated as errors
 ee2e4ec
+Sat, May 17, 2025  2:19:07 PM: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Compilation failed
+test.c: In function 'is_valid':
+test.c:245:5: error: 'main' is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:262:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:262:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+At top level:
+test.c:245:5: error: 'main' defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:7:8: error: '_strdup' defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+1f2d387

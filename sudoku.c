@@ -122,7 +122,6 @@ List* get_adj_nodes(Node* n){
 int is_final(Node* n){
   for(int i = 0; i < 9; i++)
   {
-    int vistos[10] = {0};
     for(int j = 0; j < 9; j++)
     {
         

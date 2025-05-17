@@ -44,13 +44,28 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  int i, j;
 
+  for (i = 0, i < 9; i++){
+    int vistos[10] = {0};
+
+    for(j = 0; j < 9; j++){
+      int valor = n ->sudo[i][j];
+      if(valor != 0){
+        if (vistos[valor]) return 0;
+        vistos[valor] = 1;
+      }
+    }
+  }
+
+
+  
     return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
+    List* list = createList();
     int fil = -1, col = -1;
 
     for (int i = 0; i < 9 && fil == -1; i++) {
@@ -69,7 +84,6 @@ List* get_adj_nodes(Node* n){
         new_nodo->sudo[fil][col] = val;
         pushBack(list, new_nodo);
     }
-
 
     return list;
 }
